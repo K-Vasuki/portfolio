@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Portfolio - Vasuki</title>
+
+    <!-- bootstrap css cdn link  -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65"
+      crossorigin="anonymous"
+    />
+
+    <!-- custom css file -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- google font link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- bootstrap icon cdn link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css"
+    />
+
+    <!-- for adding animation to website we have use AOS library 
+    AOS Library css file cdn link -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- jquery cdn link  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <!-- navbar starts -->
+    <nav
+      id="navbar-top"
+      class="navbar navbar-expand-lg navbar-light bg-white sticky-top"
+    >
+      <div class="container-fluid px-5">
+        <a class="navbar-brand fw-bold fs-2" href="#" style="color: #3f396d"
+          >Vasuki</a
+        >
+        <button
+          class="nav-menu d-md-none"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <i class="bi bi-menu-button-fill"></i>
+        </button>
+        <div
+          class="collapse navbar-collapse justify-content-center"
+          id="navbarNav"
+        >
+          <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+            <li class="nav-item">
+              <a class="nav-link" aria-current="page" href="#">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#qualification">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#certifications-container">Certifications</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <!-- navbar ends here -->
+
+    <!-- home section starts  -->
+    <section class="home pt-5 pb-5" id="home">
+      <div class="row justify-content-evenly align-middle">
+        <!-- here data-aos is used for adding aos animation  -->
+        <div
+          class="col-10 col-md-6 text-center text-md-start"
+          data-aos="slide-right"
+        >
+          <h2 style="color: #3f396d">
+            Hello! I Am <br /><span class="c-orange">Vasuki</span>
+          </h2>
+          <p class="text-muted">I'm A Web Developer</p>
+          <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+            Hire Me
+          </button>
+          <a href="" class="link ms-4 d-none">See My Work</a>
+        </div>
+        <div class="col-10 col-md-4 d-none d-md-block">
+          <!-- <img src="images/banner-01.webp" class="img-fluid" alt="" /> -->
+          <img
+            src="data:image/jpeg;base64,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"
+            class="img-fluid"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+    <!-- home section ends here -->
+
+    <!-- skill section starts -->
+    <section class="skill mt-5 py-5" id="about">
+      <div class="row justify-content-evenly">
+        <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress html-css">
+                  <span class="progress-value html-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">HTML & CSS</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress javascript">
+                  <span class="progress-value javascript-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">JavaScript</span>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-evenly mt-4">
+            <div class="col-10 col-md-6">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress bootstrap">
+                  <span class="progress-value bootstrap-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">Bootstrap</span>
+              </div>
+            </div>
+            <div class="col-10 col-md-6 mt-4 mt-md-0">
+              <div class="progress-card ms-3 ms-md-0">
+                <div class="circular-progress sql">
+                  <span class="progress-value sql-progress">0%</span>
+                </div>
+                <br />
+                <span class="text">Sql</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+          <div class="heading mt-5 mt-md-3">
+            <small>My Skills</small>
+            <h3>Beautiful & Unique Digital Experiences</h3>
+            <p class="text-muted">
+              I am vasuki from villupuram,Tamilnadu.I am currently studying my
+              bachelors degree at university college of engineering villupuram.
+            </p>
+            <p class="text-muted">
+              I have Good skills in Python and c programming and also having
+              knowledge in web development such as
+              Html,css,javascript,bootstrap.
+            </p>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              <!-- here download attribute is used for adding download functionality to button  -->
+              <a
+                href="K VASUKI .pdf"
+                download="SampleCV"
+                style="text-decoration: none; color: #fff"
+                >Download Resume</a
+              >
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- skill section end here -->
+    <!--Qualification section starts here-->
+
+    <div id="qualification">
+      <h1>Education qualification</h1>
+      <h2>Bachelor of Technology</h2>
+      <h3>university college of engineering villupuram</h3>
+      <h5>Information Technology</h5>
+      <h6>Cgpa-8.2 (upto 6th sem)</h6>
+    </div>
+    <!--Qualification section end here-->
+    <!--certifications section starts here-->
+    <h1 class="h1">Certifications</h1>
+    <div id="certifications-container">
+      
+      <div class="certifications">
+        <h3>web development</h3>
+        <p>platform :Nullclass</p>
+      </div>
+      <div class="certifications">
+       
+        <h3>full stack web development</h3>
+        <p>platform :zidio</p>
+      </div>
+      <div class="certifications">
+        <h3>python</h3>
+        <p>platform:Eduprep</p>
+      </div>
+      <div class="certifications">
+        <h3>Data Analytics</h3>
+        <p>platform
+          :Novitech R & D pvt ltd</p>
+      </div>
+    </div>
+    <!--certifications section end here-->
+    <!-- contact section starts -->
+    <section class="contact py-5" id="contact">
+      <div class="heading text-center">
+        <small>Get in Touch</small>
+        <h3>Any Questions? Feel Free to Contact</h3>
+      </div>
+      <div class="row justify-content-evenly mt-5">
+        <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>Thirukvilore,kallakurichi,Tamilnadu,India</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-telephone-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>+91 9042639332</p>
+            </div>
+          </div>
+          <div class="row justify-content-evenly">
+            <div class="col-1">
+              <i class="bi bi-send-fill"></i>
+            </div>
+            <div class="col-11">
+              <p>vasuki kumaraguru</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+          <div class="contact-form">
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Name"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="email"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="E-mail"
+              />
+            </div>
+            <div class="mb-3">
+              <input
+                type="text"
+                class="form-control"
+                id="exampleFormControlInput1"
+                placeholder="Mobile No."
+              />
+            </div>
+            <div class="mb-3">
+              <textarea
+                class="form-control"
+                id="exampleFormControlTextarea1"
+                placeholder="Message"
+                rows="5"
+              ></textarea>
+            </div>
+            <button class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- contact section ends here -->
+
+    <!-- now we will make back to top button when user click on it it will be redirected to top page  -->
+    <button
+      type="button"
+      class="btn btn-floating btn-lg rounded-pill"
+      id="btn-back-to-top"
+    >
+      <i class="bi bi-arrow-up"></i>
+    </button>
+
+    <!-- footer section starts  -->
+    <footer class="text-center text-muted py-4">
+      <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+      <div class="link-group mt-5" data-aos="fade-up">
+        <a href="#home">Home</a>
+        <div class="vr"></div>
+        <a href="#about">About</a>
+        <div class="vr"></div>
+        <a href="#contact">Contact</a>
+        <div class="vr"></div>
+        <a href="#about">Skills</a>
+      </div>
+      <div class="social-links mt-5" data-aos="fade-up">
+        <button href="https://www.instagram.com/in/vasuki_kumaraguru" class="rounded-pill dribble">
+          <i class="bi bi-instagram"></i>
+        </button>
+        <button href="https://www.whatsapp.com/in/9042639332" class="rounded-pill whatsapp">
+          <i class="bi bi-whatsapp"></i>
+        </button>
+        <button href="https://www.linkedin.com/in/vasukik" class="rounded-pill behance">
+          <i class="bi bi-linkedin"></i>
+        </button>
+      </div>
+      <hr class="text-muted my-4" />
+    </footer>
+    <!-- footer section ends here -->
+
+    <!-- bootstrap javascript cdn link  -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS library javascript link  -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      // initializing AOS library
+      AOS.init({
+        duration: 1000,
+        offset: 50,
+      });
+    </script>
+    <!-- custom js file linking -->
+    <script src="script.js"></script>
+  </body>
+</html>
